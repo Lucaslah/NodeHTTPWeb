@@ -10,7 +10,7 @@ var mimeTypes = {
 http.createServer((request, response)=>{
     var pathname = url.parse(request.url).pathname;
     var filename : string;
-    if(pathname === "/Web"){
+    if(pathname === "/Web/"){
         filename = "index.html";
     }
     else
