@@ -1,2 +1,2 @@
 # InkStatus
-A Basic Nodejs Server Status Information.
+A Basic Nodejs Server Status Information app.
