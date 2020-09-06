@@ -33,3 +33,5 @@ http.createServer((request, response)=>{
     return;
     }
 }).listen(5000);
+
+console.log("INK has started, go to http://localhost:5000")
