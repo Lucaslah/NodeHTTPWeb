@@ -7,7 +7,7 @@ server.get("/", (req, res) => {
 });
 
 server.get("/json", (req, res) => {
-    res.json({ message: "Hello world" });
+    res.json({ message: "JSON DATA IS NOT WORKING YET!" });
 });
 
 server.listen(port, () => {
