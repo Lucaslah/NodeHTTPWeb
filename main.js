@@ -1,39 +1,15 @@
-const http = require('http');
-const url = require('url');
-const string = require('string');
-const path = require('path');
-var mimeTypes = {
-	html: 'text/html',
-	jpeg: 'image/jpeg',
-	jpg: 'image/jpeg',
-	png: 'image/png',
-	js: 'text/javascript',
-	css: 'text/css'
-};
+const express = require('express');
+const server = express();
+const port = 5000;
 
-http
-	.createServer((request, response) => {
-		var pathname = url.parse(request.url).pathname;
-		var filename = string;
-		if (pathname === '/') {
-			filename = 'index.html';
-		} else filename = path.join(process.cwd(), pathname);
+server.get("/", (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
 
-		try {
-			fs.accessSync(filename, fs.F_OK);
-			var fileStream = fs.createReadStream(filename);
-			var mimeType = mimeTypes[path.extname(filename).split('.')[1]];
-			response.writeHead(200, { 'Content-Type': mimeType });
-			fileStream.pipe(response);
-		} catch (e) {
-			console.log('File not exists: ' + filename);
-			response.writeHead(404, { 'Content-Type': 'text/plain' });
-			response.write('404 Not Found\n');
-			response.end();
-			return;
-		}
-		return;
-	})
-	.listen(5000);
+server.get("/json", (req, res) => {
+    res.json({ message: "Hello world" });
+});
 
-console.log('INK has started, go to http://localhost:5000');
+server.listen(port, () => {
+    console.log(`Node HTTP Web Server is running at at http://localhost:${port}`);
+});
