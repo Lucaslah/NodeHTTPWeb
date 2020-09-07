@@ -1,7 +1,7 @@
 {
-    "name": "inkstatus",
+    "name": "NodeHTTPWeb",
     "version": "1.0.0",
-    "description": "A Server Info App",
+    "description": "A basic web server App",
     "main": "main.js",
     "scripts": {
         "test": "node test.js",
@@ -12,14 +12,14 @@
         "url": "git+https://github.com/Lucaslah/InkStatus.git"
     },
     "keywords": [
-        "ServerStatus"
+        "Node"
     ],
     "author": "Lucas Petrino",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Lucaslah/InkStatus/issues"
+        "url": "https://github.com/Lucaslah/NodeHTTPWeb/issues"
     },
-    "homepage": "https://github.com/Lucaslah/InkStatus#readme",
+    "homepage": "https://github.com/Lucaslah/NodeHTTPWeb#readme",
     "dependencies": {
         "express": "^4.17.1",
         "string": "^3.3.3"
