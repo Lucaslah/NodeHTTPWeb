@@ -1,6 +1,6 @@
 {
     "name": "NodeHTTPWeb",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A basic web server App",
     "main": "main.js",
     "scripts": {
