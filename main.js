@@ -1,13 +1,13 @@
 const express = require('express');
 const server = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 server.get("/", (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
 server.get("/json", (req, res) => {
-    res.json({ message: "JSON DATA IS NOT WORKING YET!" });
+    res.json({ message: "Some JSON Data" });
 });
 
 server.listen(port, () => {
