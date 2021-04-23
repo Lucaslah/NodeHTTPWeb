@@ -2,10 +2,10 @@
     "name": "NodeHTTPWeb",
     "version": "1.1.0",
     "description": "A basic web server App",
-    "main": "main.js",
+    "main": "index.js",
     "scripts": {
         "test": "node test.js",
-        "start": "node main.js"
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
